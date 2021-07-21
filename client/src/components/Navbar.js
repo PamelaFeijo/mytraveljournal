@@ -1,16 +1,6 @@
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
-
-import CameraIcon from '@material-ui/icons/PhotoCamera';
-
-
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-    icon: {
-      marginRight: theme.spacing(2),
-    },    
-  }));
-
+import CameraIcon from "@material-ui/icons/PhotoCamera";
+import useStyles from "./styles/useStyles";
 
 const Navbar = () => {
   const classes = useStyles();

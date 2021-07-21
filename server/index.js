@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 const connection = require('./db/config');
 const postRoute = require("./routes/post-route");
 
 const port = 8001;
 app.use(express.json())
+app.use(cors());
 
 connection.connect((err) => {
   if (err) {

@@ -7,7 +7,7 @@ import {
 } from "@material-ui/core";
 import useStyles from "./styles/useStyles";
 
-const Post = ({ title, description, id, deletePost, postList }) => {
+const Post = ({ title, description, id, deletePost }) => {
   const classes = useStyles();
 
   return (

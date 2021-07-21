@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Post from "./Post";
 import useStyles from "./styles/useStyles";
 import Modal from "@material-ui/core/Modal";
-import Form from "./Form"
+import Form from "./Form";
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -29,6 +29,8 @@ const Posts = () => {
   const [description, setDescription] = useState("");
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newDescription, setNewDescription] = useState("");
 
   const handleOpen = () => {
     setOpen(true);
@@ -38,7 +40,6 @@ const Posts = () => {
     setOpen(false);
   };
 
- 
   const getPosts = () => {
     Axios.get("http://localhost:8001/posts").then((response) => {
       setPostList(response.data);
@@ -51,6 +52,22 @@ const Posts = () => {
         setPostList([...postList, { description, title }]);
       }
     );
+  };
+
+  const updatePost = (id) => {
+    Axios.put("http://localhost:8001/posts", {
+      title: newTitle,
+      id: id,
+      description: newDescription,
+    }).then((response) => {
+      setPostList(
+        postList.map((val) => {
+          return val.id == id
+            ? { id: val.id, title: newTitle, description: newDescription }
+            : val;
+        })
+      );
+    });
   };
 
   const deletePost = (id) => {
@@ -77,7 +94,7 @@ const Posts = () => {
                   image="https://source.unsplash.com/random"
                   title={postList.title}
                 />
-                <Post {...card} deletePost={deletePost} />
+                <Post {...card} deletePost={deletePost} handleOpen={handleOpen} />
               </Card>
             </Grid>
           ))}
@@ -103,7 +120,14 @@ const Posts = () => {
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
           >
-            <Form modalStyle={modalStyle} addPost={addPost} title={title} description={description} setTitle={setTitle} setDescription={setDescription} />
+            <Form
+              modalStyle={modalStyle}
+              addPost={addPost}
+              title={title}
+              description={description}
+              setTitle={setTitle}
+              setDescription={setDescription}
+            />
           </Modal>
         </Grid>
         <Grid item></Grid>

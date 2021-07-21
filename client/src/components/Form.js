@@ -4,12 +4,7 @@ import Post from "./Post";
 import TextField from "@material-ui/core/TextField";
 import { Button } from "@material-ui/core";
 
-const Form = ({
-  modalStyle,
-  addPost, 
-  setDescription,
-  setTitle,
-}) => {
+const Form = ({ modalStyle, addPost, setDescription, setTitle }) => {
   const classes = useStyles();
   const [value, setValue] = React.useState("Controlled");
 
@@ -36,7 +31,7 @@ const Form = ({
             id="outlined-multiline-static"
             label="Multiline"
             multiline
-            rows={4}            
+            rows={4}
             variant="outlined"
             onChange={(event) => {
               setDescription(event.target.value);

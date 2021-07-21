@@ -6,8 +6,9 @@ import {
   CardActions,
 } from "@material-ui/core";
 import useStyles from "./styles/useStyles";
+import Form from "./Form"
 
-const Post = ({ title, description, id, deletePost }) => {
+const Post = ({ title, description, id, deletePost, handlePost }) => {
   const classes = useStyles();
 
   return (
@@ -24,7 +25,7 @@ const Post = ({ title, description, id, deletePost }) => {
           <Button size="small" color="primary">
             View
           </Button>
-          <Button size="small" color="primary">
+          <Button size="small" color="primary" onClick={() => handlePost(id)}>
             Edit
           </Button>
           <Button size="small" color="primary" onClick={() => deletePost(id)}>

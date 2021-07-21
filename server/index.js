@@ -1,8 +1,10 @@
 const express = require("express");
+const app = express();
 const connection = require('./db/config');
-const app = express();;
+const postRoute = require("./routes/post-route");
 
 const port = 8001;
+app.use(express.json())
 
 connection.connect((err) => {
   if (err) {
@@ -15,7 +17,10 @@ connection.connect((err) => {
 });
 
 
+app.use("/posts", postRoute);
+
 
 app.listen(port, () => {
   console.log(`Server running on ${port}`);
 });
+

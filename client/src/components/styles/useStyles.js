@@ -49,8 +49,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",     
   },
   typography: {
-    paddingTop: "40%",
+    paddingTop: "20%",
     color: "white !important",
+    fontWeight:"600 !important",
   },
   drawerContainer: {
     padding: "20px 30px",

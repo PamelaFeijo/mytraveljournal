@@ -16,6 +16,7 @@ const Main = () => {
               align="center"
               color='initial'
               gutterBottom
+              className={classes.typography}
             >
              Register your best <br/>
              <Typed

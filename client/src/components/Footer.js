@@ -1,40 +1,37 @@
-import {  Link, Typography } from "@material-ui/core";
+import { Link, Typography } from "@material-ui/core";
+import useStyles from "./styles/useStyles";
+import { makeStyles } from "@material-ui/core/styles";
 
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-    footer: {
-        backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(6),
-    },    
-  }));
-
-  function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
-          Your Website
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
-
- 
+function Copyright() {
+  return (
+    <Typography variant="body2" color="white" align="center">
+      {"Copyright © "}
+      <Link color="inherit" href="https://material-ui.com/">
+        Pamela Feijo
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 
 const Footer = () => {
   const classes = useStyles();
 
   return (
     <div>
-       <footer className={classes.footer}>
+      <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          My Trips Blog
         </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Something here to give the footer a purpose!
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="white"
+          component="p"
+        >
+          Contact: pamelaffeijo@gmail.com <br />
+          Github: https://github.com/PamelaFeijo
         </Typography>
         <Copyright />
       </footer>

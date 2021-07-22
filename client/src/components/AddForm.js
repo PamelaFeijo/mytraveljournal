@@ -47,7 +47,9 @@ const AddForm = ({
           />
         </div>
         <p id="simple-modal-description">
-         Add a new Post
+          This must be an adorable memory. 
+          <br/>
+           Click add to save it to your journey album!
         </p>
         <div>
           <Button

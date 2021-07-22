@@ -18,14 +18,15 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom : "20%",
   },
   addButton: {
-    marginBottom: "5%",
+    marginTop: "5%",
+    width: "200px",
   },
   titleInput: {
     marginBottom: "5%",
-    width: "300px",
+    width: "400px",
   },
   descriptionInput: {
-    width: "300px",
+    width: "400px",
   },
   toolbar: {
     display: "flex",
@@ -82,6 +83,12 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
+  footer: {
+    backgroundColor: "#400CCC",
+    padding: theme.spacing(6),
+    marginTop: "100px",
+    color: "white"
+},    
 }));
 
 export default useStyles;

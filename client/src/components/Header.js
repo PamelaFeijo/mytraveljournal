@@ -118,7 +118,7 @@ export default function Header() {
 
   const logo = (
     <Typography variant="h6" component="h1" className={classes.logo}>
-      My Trips Blog
+       My Travels Journal
     </Typography>
   );
 

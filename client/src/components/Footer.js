@@ -1,6 +1,5 @@
 import { Link, Typography } from "@material-ui/core";
 import useStyles from "./styles/useStyles";
-import { makeStyles } from "@material-ui/core/styles";
 
 function Copyright() {
   return (
@@ -22,7 +21,7 @@ const Footer = () => {
     <div>
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          My Trips Blog
+          My Travels Journal
         </Typography>
         <Typography
           variant="subtitle1"

@@ -14,14 +14,14 @@ import React, { useState, useEffect } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const headersData = [
-  {
+/*   {
     label: "Blog",
     href: "/blog",
   },
   {
     label: "Get in Touch",
     href: "/getintouch",
-  },
+  }, */
   {
     label: "My Account",
     href: "/account",

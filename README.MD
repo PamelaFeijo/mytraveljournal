@@ -1,6 +1,7 @@
 ## :world_map: Trips Blog :flight_departure:
 
-An application used to read a blog about trips, built with React, JavaScript, and CSS.
+A application to blog about trips, built with React, JavaScript, Material UI, CSS, Nodejs, Express.js and mySQL.
+It is a CRUD application, which means that it is possible to read the blogs, edit, add and delete.
 
 ## Project Status
 
@@ -21,3 +22,15 @@ To Start Server:
 To Visit App:
 
 `localhost:3000`
+
+## BackEnd -> Installation and Setup Instructions
+
+You can see the database model as well as the tables on the folder Preparation Part.
+
+To Start Server:
+
+`npm start`  
+
+To Visit App:
+
+`localhost:8001`

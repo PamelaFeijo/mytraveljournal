@@ -13,6 +13,7 @@ import useStyles from "./styles/useStyles";
 import React, { useState, useEffect } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 
+
 const headersData = [
 /*   {
     label: "Blog",
@@ -118,7 +119,7 @@ export default function Header() {
 
   const logo = (
     <Typography variant="h6" component="h1" className={classes.logo}>
-       My Travels Journal
+       My Travel Journal
     </Typography>
   );
 

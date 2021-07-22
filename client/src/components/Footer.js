@@ -21,7 +21,7 @@ const Footer = () => {
     <div>
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          My Travels Journal
+          My Travel Journal
         </Typography>
         <Typography
           variant="subtitle1"

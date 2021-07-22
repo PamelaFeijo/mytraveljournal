@@ -1,4 +1,4 @@
-## :world_map: My Travels Journal :flight_departure:
+## :world_map: My Travel Journal :flight_departure:
 
 A application to blog about trips, built with React, JavaScript, Material UI, CSS, Nodejs, Express.js and mySQL.
 <div>It is a CRUD application, which means that it is possible to read the blogs, edit, add and delete.</div>

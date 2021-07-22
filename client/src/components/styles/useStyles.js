@@ -46,8 +46,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     width: "100%",
     height: "600px",
-    backgroundSize: "cover",  
-    filter: "grayscale(80%)",
+    backgroundSize: "cover",     
   },
   typography: {
     paddingTop: "40%",

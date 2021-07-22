@@ -19,7 +19,7 @@ const AddForm = ({
         <div>
           <TextField
             id="outlined-textarea"
-            label="Post Title"
+            label="Title"
             placeholder="Placeholder"
             multiline
             variant="outlined"
@@ -34,7 +34,7 @@ const AddForm = ({
         <div>
           <TextField
             id="outlined-multiline-static"
-            label="Multiline"
+            label="Description"
             multiline
             rows={8}
             className={classes.descriptionInput}

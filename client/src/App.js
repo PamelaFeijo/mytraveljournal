@@ -1,18 +1,21 @@
 import "./App.css";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Posts from "./components/Posts";
-import Footer from "./components/Footer";
-import React from 'react';
+import React from "react";
+import Login from "./components/Login";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
+import Page from "./components/Page";
 
-
-function App() { 
+function App() {
   return (
     <div className="App">
-      <Header />
-      <Main />
-      <Posts />
-      <Footer />      
+      <Router>
+        <AuthProvider>
+          <Switch>
+            <Route path="/main" component={Page} />
+            <Route path="/" component={Login} />
+          </Switch>
+        </AuthProvider>
+      </Router>
     </div>
   );
 }

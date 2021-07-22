@@ -1,4 +1,4 @@
-import { Container, Grid, Button, Typography } from "@material-ui/core";
+import { Container, Typography } from "@material-ui/core";
 import useStyles from "./styles/useStyles";
 import Typed from "react-typed";
 
@@ -27,18 +27,7 @@ const Main = () => {
                     backSpeed={60}                    
                     loop >                    
                 </Typed>  
-            </Typography>
-           {/*  <Typography
-              variant="h5"
-              align="center"
-              color="textSecondary"
-              paragraph
-              className={classes.spacingTypography}
-            >
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so
-              folks don&apos;t simply skip over it entirely.
-            </Typography> */}
+            </Typography>          
           </div>  
         </Container>
       </div>

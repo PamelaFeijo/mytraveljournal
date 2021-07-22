@@ -22,11 +22,7 @@ const headersData = [
   {
     label: "Get in Touch",
     href: "/getintouch",
-  }, */
-  {
-    label: "My Account",
-    href: "/account",
-  },
+  }, */ 
   {
     label: "Log Out",
     href: "/logout",

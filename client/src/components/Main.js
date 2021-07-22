@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <div>
       <div className={classes.heroContent}>
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
           <div className={classes.typography}>            
             <Typography
               component="h1"

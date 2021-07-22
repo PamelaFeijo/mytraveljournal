@@ -89,7 +89,7 @@ const Posts = () => {
 
   return (
     <div>
-      <Container className={classes.cardGrid} maxWidth="md">
+      <Container className={classes.cardGrid} maxWidth="lg">
         <Grid container spacing={4}>
           {postList.map((card, key) => (
             <Grid key={card.id} item xs={12} sm={6} md={4}>

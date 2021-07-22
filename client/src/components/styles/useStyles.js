@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     width: "100%",
-    height: "600px",
+    height: "700px",
     backgroundSize: "cover",     
   },
   typography: {

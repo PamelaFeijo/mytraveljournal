@@ -29,7 +29,7 @@ const Posts = () => {
   const [description, setDescription] = useState("");
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-   const [newTitle, setNewTitle] = useState("");
+  const [newTitle, setNewTitle] = useState("");
   const [newDescription, setNewDescription] = useState("");
   const [error, setError] = useState("");
 
@@ -40,7 +40,6 @@ const Posts = () => {
   const handleClose = () => {
     setOpen(false);
   };
-
 
   const getPosts = () => {
     Axios.get("http://localhost:8001/posts").then((response) => {
@@ -56,20 +55,20 @@ const Posts = () => {
     );
   };
 
-  const updatePost = (id) => {
-    Axios.put("http://localhost:8001/posts", {
-      title: newTitle,
-      id: id,
-      description: newDescription,
-    }).then((response) => {
-      setPostList(
-        postList.map((val) => {
-          return val.id == id
-            ? { id: val.id, title: newTitle, description: newDescription }
-            : val;
-        })
-      );
-    });
+  const updatePost = (id, editedInfo) => {
+    const finalInfo = { id, ...editedInfo };
+    console.log(finalInfo);
+    Axios.put(`http://localhost:8001/posts/${id}`, finalInfo).then(
+      (response) => {
+        setPostList(
+          postList.map((val) => {
+            return val.id == id
+              ? { id: val.id, title: newTitle, description: newDescription }
+              : val;
+          })
+        );
+      }
+    );
   };
 
   const deletePost = (id) => {
@@ -85,9 +84,7 @@ const Posts = () => {
   useEffect(getPosts, []);
 
   const handleChange = (e) => {
-    setNewTitle((prevState) => {
-      return { ...prevState, [e.target.name]: e.target.value };
-    });
+    setNewTitle(e.target.value);
   };
 
   return (
@@ -107,9 +104,11 @@ const Posts = () => {
                   deletePost={deletePost}
                   handleOpen={handleOpen}
                   updatePost={updatePost}
-                  setDescription={setDescription}                  
-                  setTitle={setTitle}               
+                  setDescription={setDescription}
+                  setTitle={setTitle}
                   handleChange={handleChange}
+                  setNewTitle={setNewTitle}
+                  setNewDescription={setDescription}
                 />
               </Card>
             </Grid>
@@ -117,7 +116,7 @@ const Posts = () => {
         </Grid>
       </Container>
       <Grid container spacing={2} justifyContent="center">
-        <Grid item>        
+        <Grid item>
           <Button
             variant="contained"
             color="primary"
@@ -142,9 +141,7 @@ const Posts = () => {
               setDescription={setDescription}
             />
           </Modal>
-            
-        </Grid>
-        <Grid item></Grid>
+        </Grid>       
       </Grid>
     </div>
   );

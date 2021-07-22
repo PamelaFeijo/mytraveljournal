@@ -1,5 +1,6 @@
 import { Container, Grid, Button, Typography } from "@material-ui/core";
 import useStyles from "./styles/useStyles";
+import Typed from "react-typed";
 
 const Main = () => {
   const classes = useStyles();
@@ -16,7 +17,16 @@ const Main = () => {
               color='initial'
               gutterBottom
             >
-             Register here your best memories
+             Register your best <br/>
+             <Typed
+                strings={[
+                    'trips',
+                    'memories',
+                    'experiences']}
+                    typeSpeed={40}
+                    backSpeed={60}                    
+                    loop >                    
+                </Typed>  
             </Typography>
            {/*  <Typography
               variant="h5"

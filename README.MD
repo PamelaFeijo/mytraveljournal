@@ -11,6 +11,7 @@ A application to blog about trips, built with React, JavaScript, Material UI, CS
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
+
 Installation:
 
 `npm install`   
@@ -23,9 +24,16 @@ To Visit App:
 
 `localhost:3000`
 
+### Install the library:
+
+`npm i react-typed`
+
+
 ## BackEnd -> Installation and Setup Instructions
 
 You can see the database model as well as the tables on the folder Preparation Part.
+
+To run the database in your machine run the file reset.sql.
 
 To Start Server:
 
@@ -34,3 +42,4 @@ To Start Server:
 To Visit App:
 
 `localhost:8001`
+

@@ -3,14 +3,15 @@ import {
   Button,
   Typography,
   CardContent,
-  CardActions,
+  CardActions, 
 } from "@material-ui/core";
 import useStyles from "./styles/useStyles";
-import Form from "./Form"
+import React from "react";
 
-const Post = ({ title, description, id, deletePost, handlePost }) => {
+
+const Post = ({ title, description, id, deletePost }) => {
   const classes = useStyles();
-
+  
   return (
     <div>
       <Container maxWidth="md">
@@ -25,13 +26,14 @@ const Post = ({ title, description, id, deletePost, handlePost }) => {
           <Button size="small" color="primary">
             View
           </Button>
-          <Button size="small" color="primary" onClick={() => handlePost(id)}>
+          
+          <Button size="small" color="primary" /* onClick={handleOpenThis} */>
             Edit
-          </Button>
+          </Button>       
           <Button size="small" color="primary" onClick={() => deletePost(id)}>
             Delete
           </Button>
-        </CardActions>
+        </CardActions>     
       </Container>
     </div>
   );

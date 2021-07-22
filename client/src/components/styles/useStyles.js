@@ -1,9 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
+import picture from "../../assets/landscape.jpg"
 
-const useStyles = makeStyles((theme) => ({
-  header: {
-    backgroundColor: "#400CCC",
-  },
+const useStyles = makeStyles((theme) => ({ 
   logo: {
     fontFamily: "Work Sans, sans-serif",
     fontWeight: 600,
@@ -15,6 +13,19 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     size: "18px",
     marginLeft: "38px",
+  },
+  spacingTypography: {
+    paddingBottom : "20%",
+  },
+  addButton: {
+    marginBottom: "5%",
+  },
+  titleInput: {
+    marginBottom: "5%",
+    width: "300px",
+  },
+  descriptionInput: {
+    width: "300px",
   },
   toolbar: {
     display: "flex",
@@ -29,10 +40,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heroContent: {    
-    background: "grey",
+    backgroundImage: `url(${picture})`,   
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    width: "100%",
+    height: "600px",
+    backgroundSize: "cover",  
+    filter: "grayscale(70%)",
   },
   typography: {
-    marginTop: "10%",
+    paddingTop: "40%",
+    color: "white !important",
   },
   drawerContainer: {
     padding: "20px 30px",

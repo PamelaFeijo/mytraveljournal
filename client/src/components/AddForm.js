@@ -1,17 +1,21 @@
 import React from "react";
 import useStyles from "./styles/useStyles";
-import Post from "./Post";
 import TextField from "@material-ui/core/TextField";
 import { Button } from "@material-ui/core";
 
-const Form = ({ modalStyle, addPost, setDescription, setTitle }) => {
+const AddForm = ({
+  modalStyle,
+  addPost,
+  setDescription,
+  setTitle,
+}) => {
   const classes = useStyles();
   const [value, setValue] = React.useState("Controlled");
 
   return (
     <div>
-      <div style={modalStyle} className={classes.paper}>
-        <h2 id="simple-modal-title">Text in a modal</h2>
+      <div style={modalStyle} className={classes.paper} align="center">
+        <h2 id="simple-modal-title">Add a new Post</h2>
         <div>
           <TextField
             id="outlined-textarea"
@@ -24,14 +28,16 @@ const Form = ({ modalStyle, addPost, setDescription, setTitle }) => {
             }}
             value={value.title}
             name="title"
+            className={classes.titleInput}
           />
-        </div>
+        </div>      
         <div>
           <TextField
             id="outlined-multiline-static"
             label="Multiline"
             multiline
-            rows={4}
+            rows={8}
+            className={classes.descriptionInput}
             variant="outlined"
             onChange={(event) => {
               setDescription(event.target.value);
@@ -41,15 +47,21 @@ const Form = ({ modalStyle, addPost, setDescription, setTitle }) => {
           />
         </div>
         <p id="simple-modal-description">
-          Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+         Add a new Post
         </p>
-        <Post />
-        <Button variant="contained" color="primary" onClick={addPost}>
-          Add a post
-        </Button>
+        <div>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={addPost}
+            className={classes.addButton}
+          >
+            Add a post
+          </Button>
+        </div>      
       </div>
     </div>
   );
 };
 
-export default Form;
+export default AddForm;

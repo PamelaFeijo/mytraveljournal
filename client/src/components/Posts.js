@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Post from "./Post";
 import useStyles from "./styles/useStyles";
 import Modal from "@material-ui/core/Modal";
-import Form from "./Form";
+import AddForm from "./AddForm";
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -29,8 +29,9 @@ const Posts = () => {
   const [description, setDescription] = useState("");
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-  const [newTitle, setNewTitle] = useState("");
+   const [newTitle, setNewTitle] = useState("");
   const [newDescription, setNewDescription] = useState("");
+  const [error, setError] = useState("");
 
   const handleOpen = () => {
     setOpen(true);
@@ -39,6 +40,7 @@ const Posts = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
 
   const getPosts = () => {
     Axios.get("http://localhost:8001/posts").then((response) => {
@@ -82,6 +84,12 @@ const Posts = () => {
 
   useEffect(getPosts, []);
 
+  const handleChange = (e) => {
+    setNewTitle((prevState) => {
+      return { ...prevState, [e.target.name]: e.target.value };
+    });
+  };
+
   return (
     <div>
       <Container className={classes.cardGrid} maxWidth="md">
@@ -94,17 +102,22 @@ const Posts = () => {
                   image="https://source.unsplash.com/random"
                   title={postList.title}
                 />
-                <Post {...card} deletePost={deletePost} handleOpen={handleOpen} />
+                <Post
+                  {...card}
+                  deletePost={deletePost}
+                  handleOpen={handleOpen}
+                  updatePost={updatePost}
+                  setDescription={setDescription}                  
+                  setTitle={setTitle}               
+                  handleChange={handleChange}
+                />
               </Card>
             </Grid>
           ))}
         </Grid>
       </Container>
       <Grid container spacing={2} justifyContent="center">
-        <Grid item>
-          {/*  <Button variant="contained" color="primary" onClick={addPost}>
-            Add a post
-          </Button>   */}
+        <Grid item>        
           <Button
             variant="contained"
             color="primary"
@@ -113,14 +126,13 @@ const Posts = () => {
           >
             Add a post
           </Button>
-
           <Modal
             open={open}
             onClose={handleClose}
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
           >
-            <Form
+            <AddForm
               modalStyle={modalStyle}
               addPost={addPost}
               title={title}
@@ -129,6 +141,7 @@ const Posts = () => {
               setDescription={setDescription}
             />
           </Modal>
+            
         </Grid>
         <Grid item></Grid>
       </Grid>

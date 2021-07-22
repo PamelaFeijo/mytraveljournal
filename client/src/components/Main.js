@@ -8,41 +8,28 @@ const Main = () => {
     <div>
       <div className={classes.heroContent}>
         <Container maxWidth="sm">
-          <div className={classes.typography}>
+          <div className={classes.typography}>            
             <Typography
               component="h1"
               variant="h2"
               align="center"
-              color="textPrimary"
+              color='initial'
               gutterBottom
             >
-              Trips Blog
+             Register here your best memories
             </Typography>
-            <Typography
+           {/*  <Typography
               variant="h5"
               align="center"
               color="textSecondary"
               paragraph
+              className={classes.spacingTypography}
             >
               Something short and leading about the collection below—its contents,
               the creator, etc. Make it short and sweet, but not too short so
               folks don&apos;t simply skip over it entirely.
-            </Typography>
-          </div>
-          <div className={classes.heroButtons}>
-            <Grid container spacing={2} justifyContent="center">
-              <Grid item>
-                <Button variant="contained" color="primary">
-                  Main call to action
-                </Button>
-              </Grid>
-              <Grid item>
-                <Button variant="outlined" color="primary">
-                  Secondary action
-                </Button>
-              </Grid>
-            </Grid>
-          </div>
+            </Typography> */}
+          </div>  
         </Container>
       </div>
     </div>

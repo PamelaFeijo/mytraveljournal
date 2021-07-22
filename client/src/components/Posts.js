@@ -123,6 +123,7 @@ const Posts = () => {
             color="primary"
             type="button"
             onClick={handleOpen}
+            className={classes.addButton}
           >
             Add a post
           </Button>

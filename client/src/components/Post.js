@@ -23,9 +23,9 @@ const Post = ({ title, description, id, deletePost }) => {
         </CardContent>
 
         <CardActions>
-          <Button size="small" color="primary">
+          {/* <Button size="small" color="primary">
             View
-          </Button>
+          </Button> */}
           
           <Button size="small" color="primary" /* onClick={handleOpenThis} */>
             Edit

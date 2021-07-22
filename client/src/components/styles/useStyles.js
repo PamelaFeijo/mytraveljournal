@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "600px",
     backgroundSize: "cover",  
-    filter: "grayscale(70%)",
+    filter: "grayscale(80%)",
   },
   typography: {
     paddingTop: "40%",

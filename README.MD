@@ -43,3 +43,9 @@ To Visit App:
 
 `localhost:8001`
 
+## Project Demo
+
+![mytraveljournal](https://user-images.githubusercontent.com/64004289/126785075-688f9c59-37c7-49ff-85d1-841cb718d1b7.gif)
+
+
+

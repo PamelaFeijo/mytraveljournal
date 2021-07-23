@@ -25,7 +25,7 @@ const headersData = [
   }, */ 
   {
     label: "Log Out",
-    href: "/logout",
+    href: "/login",
   },
 ];
 

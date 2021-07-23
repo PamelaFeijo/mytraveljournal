@@ -20,7 +20,7 @@ const AddForm = ({
           <TextField
             id="outlined-textarea"
             label="Title"
-            placeholder="Placeholder"
+            //placeholder="Placeholder"
             multiline
             variant="outlined"
             onChange={(event) => {

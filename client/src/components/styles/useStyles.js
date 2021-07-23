@@ -41,8 +41,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heroContent: {    
-    backgroundImage: `url(${picture})`,   
-    backgroundSize: "contain",
+    backgroundImage: `url(${picture})`, 
     backgroundRepeat: "no-repeat",
     width: "100%",
     height: "700px",

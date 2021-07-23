@@ -59,6 +59,7 @@ const Post = ({ title, description, id, deletePost, setNewTitle , updatePost, ha
             View
           </Button> */}
           <Button
+           variant="outlined"
             size="small"
             color="primary"
             type="button"
@@ -73,9 +74,8 @@ const Post = ({ title, description, id, deletePost, setNewTitle , updatePost, ha
             aria-describedby="simple-modal-description"
           >
             {body}
-          </Modal>
-
-          <Button size="small" color="primary" onClick={() => deletePost(id)}>
+          </Modal>   
+          <Button size="small" variant="outlined" color="primary" onClick={() => deletePost(id)}>
             Delete
           </Button>
         </CardActions>

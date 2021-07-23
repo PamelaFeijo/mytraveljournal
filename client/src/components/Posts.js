@@ -31,7 +31,7 @@ const Posts = () => {
   const [open, setOpen] = React.useState(false);
   const [newTitle, setNewTitle] = useState("");
   const [newDescription, setNewDescription] = useState("");
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
 
   const handleOpen = () => {
     setOpen(true);
@@ -50,6 +50,7 @@ const Posts = () => {
   const addPost = () => {
     Axios.post("http://localhost:8001/posts", { description, title }).then(
       () => {
+        window.location.reload()
         setPostList([...postList, { description, title }]);
       }
     );
@@ -62,9 +63,10 @@ const Posts = () => {
       (response) => {
         setPostList(
           postList.map((val) => {
+            window.location.reload()
             return val.id == id
               ? { id: val.id, title: newTitle, description: newDescription }
-              : val;
+              : val;             
           })
         );
       }
